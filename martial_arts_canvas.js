@@ -51,9 +51,9 @@ let animate =(ctx,images,animation,callback)=>{
         },index*100);
     });
   setTimeout(callback,images[animation].length*100);
-       if(animation === "forward" && x < 1600){
+       if(animation == "forward" && x < 1600){
         x += 100;
-    }else if(animation === "backward" && x > 0){
+    }else if(animation == "backward" && x > 0){
         x -= 100;
     }
 };
