@@ -46,14 +46,14 @@ let imagesToLoad = 0;
 let animate =(ctx,images,animation,callback)=>{
     images[animation].forEach((image, index) =>{
         setTimeout(()=>{
-            ctx.clearRect(x,0,500,500);
-            ctx.drawImage(image, x, 0, 500,500);
+            ctx.clearRect(x,0,1000,1000);
+            ctx.drawImage(image, x, 0, 800,800);
         },index*100);
     });
   setTimeout(callback,images[animation].length*100);
-       if(animation == "forward" && x < 1600){
+       if(animation === "forward" && x < 1600){
         x += 100;
-    }else if(animation == "backward" && x > 0){
+    }else if(animation === "backward" && x > 0){
         x -= 100;
     }
 };
